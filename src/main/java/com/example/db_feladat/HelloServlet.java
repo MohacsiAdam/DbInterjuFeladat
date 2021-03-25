@@ -24,10 +24,8 @@ public class HelloServlet extends HttpServlet {
             DriverManager.registerDriver(driver);
             System.out.println("Driver successfully registered!");
 
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
         }
 
         // Hello
